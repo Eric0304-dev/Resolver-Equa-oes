@@ -1,6 +1,6 @@
-# Resolver Equações
+# Resolver Equações quadraticas
 
-Este projeto é uma aplicação desenvolvida em Python para resolver equações matemáticas. Ele permite que os usuários insiram equações e obtenham soluções de forma rápida e eficiente.
+Este projeto é uma aplicação desenvolvida em Python para resolver equações quadraticas. Ele permite que os usuários insiram equações e obtenham soluções de forma rápida e eficiente.
 
 ## Funcionalidades
 
