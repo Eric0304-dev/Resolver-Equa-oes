@@ -4,18 +4,14 @@ import math
 app = Flask(__name__)
 
 def formatar_numero(numero):
-    # Formata o número para exibir sem casas decimais adicionais desnecessárias
     if numero.is_integer():
-        return int(numero)  # Retorna sem casas decimais
+        return int(numero) 
     else:
-        return round(numero, 4)  # Limita a 4 casas decimais
+        return round(numero, 4)  
 
 def resolver_equacao_quadratica(a, b, c):
-    # Inicializar variáveis para armazenar o passo a passo
     passos = []
     passos.append(f"Resolvendo a equação: {a}x² + {b}x + {c} = 0")
-
-    # Passo 1: Calcular o discriminante (Delta)
     delta = b**2 - 4*a*c
     passos.append(f"Passo 1: Calcular o discriminante (Delta): Δ = b² - 4ac")
     passos.append(f"Δ = ({b})² - 4*({a})*({c})")
@@ -36,7 +32,6 @@ def resolver_equacao_quadratica(a, b, c):
         return passos, [raiz_unica]
     else:
         passos.append("Delta é positivo (Δ > 0), a equação possui duas raízes reais.\n")
-        # Passo 2: Calcular as raízes usando a fórmula de Bhaskara
         raiz1 = (-b + math.sqrt(delta)) / (2*a)
         raiz2 = (-b - math.sqrt(delta)) / (2*a)
         
