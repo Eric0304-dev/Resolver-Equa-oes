@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resolvendo Equação Quadrática</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Resolver Equação Quadrática</h1>
+            <p>Insira os coeficientes da equação para encontrar as raízes e o passo a passo da solução.</p>
+        </header>
+        <form action="/solve" method="POST">
+            <div class="input-group">
+                <label for="a">Coeficiente a:</label>
+                <input type="number" step="any" name="a" id="a" placeholder="Digite o valor de a" required>
+            </div>
+            <div class="input-group">
+                <label for="b">Coeficiente b:</label>
+                <input type="number" step="any" name="b" id="b" placeholder="Digite o valor de b" required>
+            </div>
+            <div class="input-group">
+                <label for="c">Coeficiente c:</label>
+                <input type="number" step="any" name="c" id="c" placeholder="Digite o valor de c" required>
+            </div>
+            <button type="submit">Resolver Equação</button>
+        </form>
+    </div>
+</body>
+</html>

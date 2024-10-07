@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultado da Equação Quadrática</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Resultado da Equação</h1>
+        </header>
+        
+        {% if error %}
+            <p class="error">{{ error }}</p>
+        {% else %}
+            <section class="steps">
+                <h2>Passo a Passo:</h2>
+                <ul>
+                    {% for passo in passos %}
+                        <li>{{ passo }}</li>
+                    {% endfor %}
+                </ul>
+            </section>
+
+            <section class="result">
+                <h2>Raízes:</h2>
+                {% if raizes %}
+                    <ul>
+                        {% for raiz in raizes %}
+                            <li>x = {{ raiz }}</li>
+                        {% endfor %}
+                    </ul>
+                {% else %}
+                    <p>Não há raízes reais.</p>
+                {% endif %}
+            </section>
+        {% endif %}
+
+        <a href="/" class="btn">Voltar para o Início</a>
+    </div>
+</body>
+</html>
